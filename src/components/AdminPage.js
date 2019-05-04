@@ -32,7 +32,10 @@ class AdminPage extends React.Component {
 render(){
     return (
         <div>
-            {!this.state.submitted && <Form onSubmit={this.handleSubmit}>
+            {!this.state.submitted &&
+            <> 
+            <h2>Enter a Zip Code and Choose a Service You Are Looking For</h2>
+            <Form onSubmit={this.handleSubmit}>
                 <Form.Field
                     onChange={this.onZipChange}
                     control={Input}
@@ -58,7 +61,9 @@ render(){
                     </select>
                 </Form.Field>
                 <Button type="submit" color="teal">Submit</Button>
-            </Form>}
+            </Form>
+            </>
+            }
             {this.state.submitted && 
                 <DonationsList 
                     zipCode={this.state.zipCode}
