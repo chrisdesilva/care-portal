@@ -13,7 +13,7 @@ I'd LOVE your help on this project! All are welcome to contribute. You can find 
 3. `cd care-portal` to make sure you are in the right directory
 4. Add an `upstream` remote for keeping your local repo up-to-date:
   > `git remote add upstream git@github.com:chrisdesilva/care-portal.git`
-5. Run `npm install` to install project dependencies. This needs to be done from both the root directory and the client directory.
+5. Run `npm install` to install project dependencies.
 6. Run `npm start` to start your dev environment 
 7. Begin making magic
 
