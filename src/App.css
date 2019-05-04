@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  padding: 1rem;
+  margin: auto;
 }
 
 .App-header {
@@ -13,4 +14,7 @@
   color: white;
 }
 
+#btn-primary {
+  background: #F37332;
+}
 
