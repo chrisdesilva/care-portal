@@ -29,13 +29,19 @@ class AdminPage extends React.Component {
         })
     }
 
+    goBack = () => {
+        this.setState({
+            submitted: false
+        })
+    }
+
 render(){
     return (
-        <div id="container">
+        <div id="container"> 
             {!this.state.submitted &&
             <Form onSubmit={this.handleSubmit} id="adminForm" warning>
                 <Message
-                    warning
+                    info
                     header='Search for Donors'
                     list={[
                         'Enter zip code and select a donation type to find a donor in your area.',
@@ -72,6 +78,7 @@ render(){
                 <DonationsList 
                     zipCode={this.state.zipCode}
                     donation={this.state.donation}
+                    goBack={this.goBack}
                 />
             }
         </div>

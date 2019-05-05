@@ -1,5 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400');
+
 body {
-   background-color: #F3F3F3;
+   font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-align: center;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+html {
+  background-image: radial-gradient(circle, rgba(247, 247, 247, 0.466)0%, rgba(247, 247, 247, 0.9738270308123249) 74%);
 }
 
 .App {
@@ -23,7 +39,7 @@ body {
 }
 
 .homePage {
-  background-color: white;
+   background-image: radial-gradient(circle, rgba(247, 247, 247, 0.466)0%, rgba(247, 247, 247, 0.9738270308123249) 0%);
 }
 
 #adminForm {
@@ -38,10 +54,53 @@ body {
   padding: 2rem;
 }
 
+#donors {
+  color: #F2711C;
+}
+
+#list {
+  color: #009C95;
+}
+
 #container {
-  background-color: #F3F3F3;
   display: flex;
   justify-content: center;
+  margin-bottom: 5rem;
+}
+
+#donorFooter {
+  background-color: white;
+  height: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #F37332;
+}
+
+#donorReceipt {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+#footerMenu {
+  bottom: 0;
+  position: fixed;
+}
+
+#modalFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialMedia {
+  transition: all .3s;
+}
+
+.socialMedia:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 600px){
@@ -50,8 +109,17 @@ body {
   }
 
   #donationList {
-  margin: 10rem auto;
-}
+    margin: 10rem auto;
+  }
+
+  #donorReceipt {
+    margin-bottom: 5rem;
+  }
+  
+
+  #modalFooter {
+    justify-content: flex-end;
+  }
 
 }
 

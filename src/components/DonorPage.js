@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Form, Input, TextArea } from 'semantic-ui-react'
+import { Button, Form, Input, Message, TextArea } from 'semantic-ui-react'
 import DonorReceipt from './DonorReceipt'
 
 class DonorPage extends React.Component {
@@ -65,21 +65,25 @@ class DonorPage extends React.Component {
         return (
             <div id="container">
                 {!this.state.submitted && <Form id="donorForm" onSubmit={this.handleSubmit}>
+                    <Message info>
+                        <Message.Header>Fill out the donor form below</Message.Header>
+                        <p>Add your information and we'll follow up within 48 hours.</p>
+                    </Message>
                     <Form.Field required>
                         <label>Select Donation Type</label>
                         <select onChange={this.onDonationChange}>
-                            <option disabled>----Services----</option>
-                            <option value="transportation">Transportation</option>
-                            <option value="cooking">Cooking</option>
-                            <option value="cleaning">Cleaning</option>
-                            <option value="handyman">Handyman</option>
-                            <option value="auto">Auto Maintenance</option>
+                            <option selected disabled>----Services----</option>
+                            <option value="Transportation">Transportation</option>
+                            <option value="Cooking">Cooking</option>
+                            <option value="Cleaning">Cleaning</option>
+                            <option value="Handyman">Handyman</option>
+                            <option value="Auto">Auto Maintenance</option>
                             <option disabled>----Goods----</option>
-                            <option value="furniture">Furniture</option>
-                            <option value="food">Food</option>
-                            <option value="clothing">Clothing</option>
-                            <option value="toys">Toys</option>
-                            <option value="childcare">Baby Products</option>
+                            <option value="Furniture">Furniture</option>
+                            <option value="Food">Food</option>
+                            <option value="Clothing">Clothing</option>
+                            <option value="Toys">Toys</option>
+                            <option value="Baby Products">Baby Products</option>
                         </select>
                     </Form.Field>
                     <Form.Field 
