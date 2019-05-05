@@ -39,7 +39,7 @@ const DonationsList = props => {
     }
 
     return (
-        <div>
+        <div id="donationList">
             {!showReceipt && <Card.Group>
                 {donors.map( donor => {
                     return <Card>
@@ -52,7 +52,7 @@ const DonationsList = props => {
                                 {donor.description}
                             </Card.Description>
                         </Card.Content>
-                        <Modal trigger={<Button color="teal">Details</Button>}>
+                        <Modal closeIcon trigger={<Button color="teal">Details</Button>}>
                             <Modal.Header>{donor.name}</Modal.Header>
                             <Modal.Content image>
                                 <Image wrapped size='medium' src='https://react.semantic-ui.com/images/avatar/large/rachel.png' />
@@ -63,7 +63,9 @@ const DonationsList = props => {
                                     <p>{donor.phone}</p>
                                 </Modal.Description>
                             </Modal.Content>
-                            <Button onClick={showAdminReceipt}>Book Now</Button>
+                            <Modal.Actions>
+                                <Button color="teal" onClick={showAdminReceipt}>Book Now</Button>
+                            </Modal.Actions>
                         </Modal>
                     </Card>
                 })}

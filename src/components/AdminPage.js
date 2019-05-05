@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Form, Input } from 'semantic-ui-react'
+import { Button, Form, Input, Message } from 'semantic-ui-react'
 import DonationsList from './DonationsList'
 
 class AdminPage extends React.Component {
@@ -31,11 +31,16 @@ class AdminPage extends React.Component {
 
 render(){
     return (
-        <div>
+        <div id="container">
             {!this.state.submitted &&
-            <> 
-            <h2>Enter a Zip Code and Choose a Service You Are Looking For</h2>
-            <Form onSubmit={this.handleSubmit}>
+            <Form onSubmit={this.handleSubmit} id="adminForm" warning>
+                <Message
+                    warning
+                    header='Search for Donors'
+                    list={[
+                        'Enter zip code and select a donation type to find a donor in your area.',
+                    ]}
+                />
                 <Form.Field
                     onChange={this.onZipChange}
                     control={Input}
@@ -62,7 +67,6 @@ render(){
                 </Form.Field>
                 <Button type="submit" color="teal">Submit</Button>
             </Form>
-            </>
             }
             {this.state.submitted && 
                 <DonationsList 

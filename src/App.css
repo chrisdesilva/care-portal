@@ -1,6 +1,10 @@
+body {
+   background-color: #F3F3F3;
+}
+
 .App {
-  padding: 1rem;
   margin: auto;
+  min-height: 100vh;
 }
 
 .App-header {
@@ -16,5 +20,38 @@
 
 #btn-primary {
   background: #F37332;
+}
+
+.homePage {
+  background-color: white;
+}
+
+#adminForm {
+  padding: 2rem;
+}
+
+#donationList {
+  margin: 1rem 5rem 1rem 5rem;
+}
+
+#donorForm {
+  padding: 2rem;
+}
+
+#container {
+  background-color: #F3F3F3;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 600px){
+  #adminForm {
+    padding: 10rem;
+  }
+
+  #donationList {
+  margin: 10rem auto;
+}
+
 }
 

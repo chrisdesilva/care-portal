@@ -63,8 +63,8 @@ class DonorPage extends React.Component {
 
     render() {
         return (
-            <div>
-                {!this.state.submitted && <Form onSubmit={this.handleSubmit}>
+            <div id="container">
+                {!this.state.submitted && <Form id="donorForm" onSubmit={this.handleSubmit}>
                     <Form.Field required>
                         <label>Select Donation Type</label>
                         <select onChange={this.onDonationChange}>
@@ -117,10 +117,12 @@ class DonorPage extends React.Component {
                         placeholder="Enter your zip code"
                         required
                     />
-                    <Form.Field>
-                        <label>Upload Photo</label>
-                        <input type="file" id="file" onChange={this.onChangePhoto} />
-                    </Form.Field>
+                    <Form.Field
+                        onChange={this.onChangePhoto}
+                        label="Upload Photo"
+                        control={Input}
+                        type="file"
+                    />
                     <Button type="submit" color="orange">Submit</Button>
                 </Form>}
                 {this.state.submitted && 
