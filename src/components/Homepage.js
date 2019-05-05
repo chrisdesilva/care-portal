@@ -73,13 +73,14 @@ const Homepage = () => {
                     </Header>
                     <Form size='large'>
                         <Segment stacked>
-                            <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address' />
+                            <Form.Input value="user@gmail.com" fluid icon='user' iconPosition='left' placeholder='E-mail address' />
                             <Form.Input
                                 fluid
                                 icon='lock'
                                 iconPosition='left'
                                 placeholder='Password'
                                 type='password'
+                                value="password"
                             />
 
                             {showButtons && <Button color="orange" onClick={handleDonor}>I am a Donor</Button>}
