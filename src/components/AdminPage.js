@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Form, Input, Message } from 'semantic-ui-react'
 import DonationsList from './DonationsList'
+import Nav from './Nav'
 
 class AdminPage extends React.Component {
 
@@ -37,7 +38,8 @@ class AdminPage extends React.Component {
 
 render(){
     return (
-        <div id="container"> 
+        <div id="container">
+        <Nav /> 
             {!this.state.submitted &&
             <Form onSubmit={this.handleSubmit} id="adminForm" warning>
                 <Message

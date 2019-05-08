@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Form, Input, Message, TextArea } from 'semantic-ui-react'
 import DonorReceipt from './DonorReceipt'
+import Nav from './Nav'
 
 class DonorPage extends React.Component {
 
@@ -64,6 +65,7 @@ class DonorPage extends React.Component {
     render() {
         return (
             <div id="container">
+            <Nav />
                 {!this.state.submitted && <Form id="donorForm" onSubmit={this.handleSubmit}>
                     <Message info>
                         <Message.Header>Fill out the donor form below</Message.Header>
