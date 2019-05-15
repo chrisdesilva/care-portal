@@ -64,8 +64,9 @@ class DonorPage extends React.Component {
 
     render() {
         return (
-            <div id="container">
+            <div>
             <Nav />
+            <div className="container">
                 {!this.state.submitted && <Form id="donorForm" onSubmit={this.handleSubmit}>
                     <Message info>
                         <Message.Header>Fill out the donor form below</Message.Header>
@@ -136,6 +137,7 @@ class DonorPage extends React.Component {
                         name={this.state.name}
                     />
                 }
+                </div>
             </div>
         )
     }

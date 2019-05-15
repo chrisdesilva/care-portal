@@ -41,7 +41,6 @@ const Homepage = () => {
           <Form size="large">
             <Segment stacked>
               <Form.Input
-                value="user@gmail.com"
                 fluid
                 icon="user"
                 iconPosition="left"
@@ -53,7 +52,6 @@ const Homepage = () => {
                 iconPosition="left"
                 placeholder="Password"
                 type="password"
-                value="password"
               />
                 <Button as={NavLink} to="/donate" color="orange">
                   I am a Donor

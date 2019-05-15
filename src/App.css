@@ -18,6 +18,15 @@ html {
   background-image: radial-gradient(circle, rgba(247, 247, 247, 0.466)0%, rgba(247, 247, 247, 0.9738270308123249) 74%);
 }
 
+ul {
+  list-style: none
+}
+
+li {
+  text-decoration: none;
+  padding-right: 2rem;
+}
+
 .App {
   margin: auto;
   min-height: 100vh;
@@ -34,12 +43,20 @@ html {
   color: white;
 }
 
-#btn-primary {
-  background: #F37332;
+.homePage {
+  background-image: radial-gradient(circle, rgba(247, 247, 247, 0.466)0%, rgba(247, 247, 247, 0.9738270308123249) 0%);
 }
 
-.homePage {
-   background-image: radial-gradient(circle, rgba(247, 247, 247, 0.466)0%, rgba(247, 247, 247, 0.9738270308123249) 0%);
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  background-image: radial-gradient(circle, rgba(247, 247, 247, 0.466)0%, rgba(247, 247, 247, 0.9738270308123249) 74%);
+  align-items: center;
+  padding: 1rem 0;
+}
+
+#btn-primary {
+  background: #F37332;
 }
 
 #adminForm {
@@ -48,6 +65,8 @@ html {
 
 #donationList {
   margin: 1rem 5rem 1rem 5rem;
+  display: flex;
+  justify-content: center;
 }
 
 #donorForm {
@@ -62,7 +81,7 @@ html {
   color: #009C95;
 }
 
-#container {
+.container {
   display: flex;
   justify-content: center;
   margin-bottom: 5rem;

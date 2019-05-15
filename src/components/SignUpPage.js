@@ -1,9 +1,12 @@
 import React from 'react'
 import { Button, Form, Message, Input } from 'semantic-ui-react'
+import Nav from './Nav'
 
 const SignUpPage = props => {
     return (
-        <div id="container">
+        <div>
+            <Nav/>
+        <div class="container">
             <Form onSubmit={props.handleSubmit} id="adminForm" warning>
                 <Message
                     info
@@ -35,6 +38,7 @@ const SignUpPage = props => {
                 />
                 <Button color="orange" type="submit">Create Account</Button>
             </Form>
+            </div>
         </div>
     )
 }

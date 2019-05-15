@@ -47,8 +47,9 @@ const DonationsList = props => {
     }
 
     return (
-        <div id="donationList">
-            <Button onClick={props.goBack} style={{marginBottom:'2rem'}}>Back</Button>
+        <div>
+            <Button onClick={props.goBack} style={{margin:'auto'}}>Back</Button>
+            <div id="donationList">
             {!showReceipt && <Card.Group>
                 {donors.map( donor => {
                     return <Card>
@@ -94,6 +95,7 @@ const DonationsList = props => {
                     donation={props.donation}
                 />
             }
+        </div>
         </div>
     )
 }

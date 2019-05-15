@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const Nav = () => (
-  <ul>
+  <ul class='nav'>
     <li>
       <NavLink exact to="/">
         Home
